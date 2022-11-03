@@ -3,8 +3,8 @@ float get_value(int a, int b, float r) {
     float i;
 
     if(b > a) {
-    i = b - a;
-    x = a + (i * r);
+        i = b - a;
+        x = a + (i * r);
     }
     else {
         i = a - b;
