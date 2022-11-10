@@ -22,20 +22,19 @@ void stu_draw_line(t_bunny_position *pos_a,
                    unsigned int color)
 {
     t_bunny_position pos;
-    float r;
-    float x;
+    
     int xa = pos_a -> x;
     int ya = pos_a -> y;
     int xb = pos_b -> x;
     int yb = pos_b -> y;
+    float r;
 
     pos.x = pos_a -> x;
     pos.y = pos_a -> y;
     if (xa > xb) {
         xa = pos_b -> x;
         xb = pos_a -> x;
-    }
-    else if (ya > yb) {
+    } else if (ya > yb) {
         ya = pos_b -> y;
         yb = pos_a -> y;
     }
@@ -47,8 +46,7 @@ void stu_draw_line(t_bunny_position *pos_a,
          pos.x = xa;
          xa = xa + 1;
          }
-    }
-    else {
+    } else {
         while(ya <= yb) {
          put_pixel(&pos, px, color);
          r = get_ratio(pos_a -> y, pos_b -> y, xa);
