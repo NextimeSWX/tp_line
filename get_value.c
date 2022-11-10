@@ -1,14 +1,14 @@
-float get_value(int a, int b, float r) {
+float get_value(int a, int b, float r)
+{
     float x;
-    float i;
+    float z;
 
     if(b > a) {
-        i = b - a;
-        x = a + (i * r);
-    }
-    else {
-        i = a - b;
-        x = b + (i * r);
+        z = b - a;
+        x = a + (z * r);
+    } else {
+        z = a - b;
+        x = b + (z * r);
     }
     return(x);
 }
