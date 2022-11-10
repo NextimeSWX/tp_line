@@ -11,7 +11,7 @@
 #include <stdlib.h>
 
 float get_ratio(int a, int b, int x);
-float get_value(int a, int b, float r);
+int get_value(int a, int b, float r);
 void put_pixel(t_bunny_position *pos,
                t_bunny_pixelarray *px,
                unsigned int color);
@@ -24,17 +24,23 @@ void stu_draw_line(t_bunny_position *pos_a,
     t_bunny_position pos;
     float r;
     float x;
-    int z;
+    int xa = pos_a -> x;
+    int ya = pos_a -> y;
+    int xb = pos_b -> x;
+    int yb = pos_b -> y;
 
     pos.x = pos_a -> x;
     pos.y = pos_a -> y;
-    z = pos_a -> x;
-    
-     while(pos_b -> x >= z) {
+    if(xb - xa >= yb - ya) {
+     while(xa <= xb) {
          put_pixel(&pos, px, color);
-         r = get_ratio(pos_a -> x, pos_b -> x, z);
+         r = get_ratio(pos_a -> x, pos_b -> x, xa);
          pos.y = get_value(pos_a -> y, pos_b -> y, r);
-         pos.x = pos.x + 1;
-         z = z + 1;
+         pos.x = xa;
+         xa = xa + 1;
          }
+    }
+    else if(ya <= yb) {
+        
+    }
 }
