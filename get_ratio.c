@@ -1,14 +1,14 @@
 float get_ratio(int a, int b, int x)
 {
-    float ratio;
-    float i;
+    float r;
+    float z;
 
     if(b > a) {
-        i = b - a;
-        ratio = (x - a) / i;
+        z = b - a;
+        r = (x - a) / z;
     } else {
-        i = a - b;
-        ratio = (x - b) / i;
+        z = a - b;
+        r = (x - b) / z;
     }
-    return(ratio);
+    return(r);
 }
