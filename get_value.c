@@ -1,4 +1,4 @@
-float get_value(int a, int b, float r)
+int get_value(int a, int b, float r)
 {
     float x;
     float z;
