@@ -31,6 +31,14 @@ void stu_draw_line(t_bunny_position *pos_a,
 
     pos.x = pos_a -> x;
     pos.y = pos_a -> y;
+    if (xa > xb) {
+        xa = pos_b -> x;
+        xb = pos_a -> x;
+    }
+    else if (ya > yb) {
+        ya = pos_b -> y;
+        yb = pos_a -> y;
+    }
     if(xb - xa >= yb - ya) {
      while(xa <= xb) {
          put_pixel(&pos, px, color);
