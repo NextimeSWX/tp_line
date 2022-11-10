@@ -40,7 +40,13 @@ void stu_draw_line(t_bunny_position *pos_a,
          xa = xa + 1;
          }
     }
-    else if(ya <= yb) {
-        
+    else {
+        while(ya <= yb) {
+         put_pixel(&pos, px, color);
+         r = get_ratio(pos_a -> y, pos_b -> y, xa);
+         pos.x = get_value(pos_a -> x, pos_b -> x, r);
+         pos.y = ya;
+         ya = ya + 1;
+         }
     }
 }
